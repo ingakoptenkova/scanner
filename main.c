@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "src/scanner.h"
 
 int main() {
@@ -7,12 +8,12 @@ int main() {
     FILE *fp = fopen("c:\\users\\inga\\git\\lexica\\example.txt", "r");
     if (fp == NULL) {
         fprintf(stderr, "Error in opening file");
-        return -1;
+        exit(EXIT_FAILURE);
     }
 
     scan(fp, token, sizeof(token));
 
     fclose(fp);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
