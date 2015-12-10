@@ -5,7 +5,7 @@
 int main() {
     char token[20];
 
-    FILE *fp = fopen("c:\\users\\inga\\git\\lexica\\example.txt", "r");
+    FILE *fp = fopen("c:\\users\\inga\\git\\scanner\\example.txt", "r");
     if (fp == NULL) {
         fprintf(stderr, "Error in opening file");
         exit(EXIT_FAILURE);
